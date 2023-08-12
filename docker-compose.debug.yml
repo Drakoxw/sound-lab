@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  soundlab:
+    image: soundlab
+    build:
+      context: .
+      dockerfile: ./Dockerfile
