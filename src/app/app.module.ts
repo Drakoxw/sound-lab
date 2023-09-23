@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { ChatMeWhatsappComponent } from '@shared/chat-me-whatsapp/chat-me-whatsapp.component';
+import { NavBarComponent } from '@shared/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ChatMeWhatsappComponent } from '@shared/chat-me-whatsapp/chat-me-whatsa
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChatMeWhatsappComponent
+    ChatMeWhatsappComponent,
+    NavBarComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
