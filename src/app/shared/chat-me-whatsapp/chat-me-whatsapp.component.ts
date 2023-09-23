@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-const WHATSAPP_PHONE = 573008022500
-const WHATSAPP_LINK = "https://wa.me/" + WHATSAPP_PHONE;
+import { WHATSAPP_LINK } from '@constants/common';
 
 @Component({
   selector: 'app-chat-me-whatsapp',
