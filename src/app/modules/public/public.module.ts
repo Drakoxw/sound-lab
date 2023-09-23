@@ -5,13 +5,15 @@ import { SubRoutingModule } from './sub-routing.module';
 
 import { ContactMeComponent } from './Views/contact-me/contact-me.component';
 import { HomeComponent } from './Views/home/home.component';
+import { EmailFormComponent } from './Components/email-form/email-form.component';
 
 
 
 @NgModule({
   declarations: [
     ContactMeComponent,
-    HomeComponent
+    HomeComponent,
+    EmailFormComponent
   ],
   imports: [
     CommonModule,
