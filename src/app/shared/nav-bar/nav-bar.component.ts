@@ -18,4 +18,6 @@ export class NavBarComponent {
 
   routes = PATHS_FULL_CLIENT;
 
+  showNavbar:boolean = false;
+
 }
