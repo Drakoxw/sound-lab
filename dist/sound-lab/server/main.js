@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 4991:
+/***/ 34991:
 /*!*******************!*\
   !*** ./server.ts ***!
   \*******************/
@@ -16,18 +16,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   renderModule: () => (/* reexport safe */ _angular_platform_server__WEBPACK_IMPORTED_MODULE_7__.renderModule),
 /* harmony export */   "ɵSERVER_CONTEXT": () => (/* reexport safe */ _angular_platform_server__WEBPACK_IMPORTED_MODULE_7__["ɵSERVER_CONTEXT"])
 /* harmony export */ });
-/* harmony import */ var zone_js_node__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zone.js/node */ 650);
+/* harmony import */ var zone_js_node__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zone.js/node */ 20650);
 /* harmony import */ var zone_js_node__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(zone_js_node__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ 4228);
-/* harmony import */ var _nguniversal_express_engine__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nguniversal/express-engine */ 3389);
-/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! express */ 5162);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ 34228);
+/* harmony import */ var _nguniversal_express_engine__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nguniversal/express-engine */ 93389);
+/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! express */ 35162);
 /* harmony import */ var express__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var node_fs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! node:fs */ 7561);
+/* harmony import */ var node_fs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! node:fs */ 87561);
 /* harmony import */ var node_fs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(node_fs__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var node_path__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! node:path */ 9411);
+/* harmony import */ var node_path__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! node:path */ 49411);
 /* harmony import */ var node_path__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(node_path__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _src_main_server__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./src/main.server */ 8674);
-/* harmony import */ var _angular_platform_server__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/platform-server */ 7014);
+/* harmony import */ var _src_main_server__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./src/main.server */ 49174);
+/* harmony import */ var _angular_platform_server__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/platform-server */ 97014);
 
 
 
@@ -85,7 +85,7 @@ if (moduleFilename === __filename || moduleFilename.includes('iisnode')) {
 
 /***/ }),
 
-/***/ 1838:
+/***/ 11838:
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
   \***************************************/
@@ -96,9 +96,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AppRoutingModule: () => (/* binding */ AppRoutingModule)
 /* harmony export */ });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 8804);
-/* harmony import */ var _constants_routes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @constants/routes */ 180);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 9936);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 68804);
+/* harmony import */ var _constants_routes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @constants/routes */ 20180);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 59936);
 var _class;
 
 
@@ -106,7 +106,7 @@ var _class;
 
 const routes = [{
   path: _constants_routes__WEBPACK_IMPORTED_MODULE_0__.MODULES.PUBLIC,
-  loadChildren: () => __webpack_require__.e(/*! import() */ 328).then(__webpack_require__.bind(__webpack_require__, /*! @modulePublic/public.module */ 5328)).then(m => m.PublicModule)
+  loadChildren: () => __webpack_require__.e(/*! import() */ 328).then(__webpack_require__.bind(__webpack_require__, /*! @modulePublic/public.module */ 75328)).then(m => m.PublicModule)
 }, {
   path: '**',
   redirectTo: '',
@@ -134,7 +134,7 @@ _class.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefi
 
 /***/ }),
 
-/***/ 6846:
+/***/ 96846:
 /*!**********************************!*\
   !*** ./src/app/app.component.ts ***!
   \**********************************/
@@ -145,25 +145,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AppComponent: () => (/* binding */ AppComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 9936);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 8804);
-/* harmony import */ var _shared_chat_me_whatsapp_chat_me_whatsapp_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./shared/chat-me-whatsapp/chat-me-whatsapp.component */ 3718);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 59936);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ 85028);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rxjs__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 34228);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ 68804);
+/* harmony import */ var _shared_chat_me_whatsapp_chat_me_whatsapp_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./shared/chat-me-whatsapp/chat-me-whatsapp.component */ 83718);
 /* harmony import */ var _shared_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./shared/nav-bar/nav-bar.component */ 5312);
 var _class;
 
 
 
 
+
+
+
 class AppComponent {
-  constructor() {
+  constructor(platformId) {
+    this.platformId = platformId;
     this.title = 'sound-lab';
+    AppComponent.isBrowser.next((0,_angular_common__WEBPACK_IMPORTED_MODULE_2__.isPlatformBrowser)(platformId));
   }
 }
 _class = AppComponent;
+_class.isBrowser = new rxjs__WEBPACK_IMPORTED_MODULE_3__.BehaviorSubject(false);
 _class.ɵfac = function AppComponent_Factory(t) {
-  return new (t || _class)();
+  return new (t || _class)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__.PLATFORM_ID));
 };
-_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({
   type: _class,
   selectors: [["app-root"]],
   decls: 4,
@@ -171,18 +180,18 @@ _class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefi
   consts: [[1, "w-full", "h-screen"]],
   template: function AppComponent_Template(rf, ctx) {
     if (rf & 1) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "main", 0);
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "app-nav-bar")(2, "router-outlet")(3, "app-chat-me-whatsapp");
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "main", 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "app-nav-bar")(2, "router-outlet")(3, "app-chat-me-whatsapp");
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
     }
   },
-  dependencies: [_angular_router__WEBPACK_IMPORTED_MODULE_3__.RouterOutlet, _shared_chat_me_whatsapp_chat_me_whatsapp_component__WEBPACK_IMPORTED_MODULE_0__.ChatMeWhatsappComponent, _shared_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_1__.NavBarComponent],
+  dependencies: [_angular_router__WEBPACK_IMPORTED_MODULE_5__.RouterOutlet, _shared_chat_me_whatsapp_chat_me_whatsapp_component__WEBPACK_IMPORTED_MODULE_0__.ChatMeWhatsappComponent, _shared_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_1__.NavBarComponent],
   styles: ["main[_ngcontent-%COMP%] {\n  background-image: url('bg-movil.webp');\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n@media (min-width: 900px) {\n  main[_ngcontent-%COMP%] {\n    background-image: url('bg-pc.webp');\n  }\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usc0NBQTZEO0VBQzdELDJCQUEyQjtFQUMzQiw0QkFBNEI7RUFDNUIsc0JBQXNCO0FBQ3hCOztBQUVBO0VBQ0U7SUFDRSxtQ0FBMEQ7RUFDNUQ7QUFDRiIsImZpbGUiOiJhcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIm1haW4ge1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi9hc3NldHMvaW1nL2JhY2tncm91bmQvYmctbW92aWwud2VicCk7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDkwMHB4KSB7XHJcbiAgbWFpbiB7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoLi4vYXNzZXRzL2ltZy9iYWNrZ3JvdW5kL2JnLXBjLndlYnApO1xyXG4gIH1cclxufVxyXG4iXX0= */\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxzQ0FBNkQ7RUFDN0QsMkJBQTJCO0VBQzNCLDRCQUE0QjtFQUM1QixzQkFBc0I7QUFDeEI7O0FBRUE7RUFDRTtJQUNFLG1DQUEwRDtFQUM1RDtBQUNGOztBQUVBLDR1QkFBNHVCIiwic291cmNlc0NvbnRlbnQiOlsibWFpbiB7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKC4uL2Fzc2V0cy9pbWcvYmFja2dyb3VuZC9iZy1tb3ZpbC53ZWJwKTtcclxuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG59XHJcblxyXG5AbWVkaWEgKG1pbi13aWR0aDogOTAwcHgpIHtcclxuICBtYWluIHtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi9hc3NldHMvaW1nL2JhY2tncm91bmQvYmctcGMud2VicCk7XHJcbiAgfVxyXG59XHJcbiJdLCJzb3VyY2VSb290IjoiIn0= */"]
 });
 
 /***/ }),
 
-/***/ 41:
+/***/ 50041:
 /*!*******************************!*\
   !*** ./src/app/app.module.ts ***!
   \*******************************/
@@ -193,13 +202,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AppModule: () => (/* binding */ AppModule)
 /* harmony export */ });
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ 1081);
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app-routing.module */ 1838);
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ 6846);
-/* harmony import */ var _shared_chat_me_whatsapp_chat_me_whatsapp_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @shared/chat-me-whatsapp/chat-me-whatsapp.component */ 3718);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ 41081);
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser/animations */ 97378);
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-toastr */ 30868);
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app-routing.module */ 11838);
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ 96846);
+/* harmony import */ var _shared_chat_me_whatsapp_chat_me_whatsapp_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @shared/chat-me-whatsapp/chat-me-whatsapp.component */ 83718);
 /* harmony import */ var _shared_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @shared/nav-bar/nav-bar.component */ 5312);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 9936);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 59936);
 var _class;
+
+
+
 
 
 
@@ -216,18 +230,18 @@ _class.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefi
   bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent]
 });
 _class.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjector"]({
-  imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.BrowserModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule, _shared_chat_me_whatsapp_chat_me_whatsapp_component__WEBPACK_IMPORTED_MODULE_2__.ChatMeWhatsappComponent, _shared_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_3__.NavBarComponent]
+  imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.BrowserModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__.BrowserAnimationsModule, ngx_toastr__WEBPACK_IMPORTED_MODULE_7__.ToastrModule.forRoot(), _shared_chat_me_whatsapp_chat_me_whatsapp_component__WEBPACK_IMPORTED_MODULE_2__.ChatMeWhatsappComponent, _shared_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_3__.NavBarComponent]
 });
 (function () {
   (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵsetNgModuleScope"](AppModule, {
     declarations: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent],
-    imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.BrowserModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule, _shared_chat_me_whatsapp_chat_me_whatsapp_component__WEBPACK_IMPORTED_MODULE_2__.ChatMeWhatsappComponent, _shared_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_3__.NavBarComponent]
+    imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.BrowserModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__.BrowserAnimationsModule, ngx_toastr__WEBPACK_IMPORTED_MODULE_7__.ToastrModule, _shared_chat_me_whatsapp_chat_me_whatsapp_component__WEBPACK_IMPORTED_MODULE_2__.ChatMeWhatsappComponent, _shared_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_3__.NavBarComponent]
   });
 })();
 
 /***/ }),
 
-/***/ 1463:
+/***/ 21463:
 /*!**************************************!*\
   !*** ./src/app/app.server.module.ts ***!
   \**************************************/
@@ -238,10 +252,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AppServerModule: () => (/* binding */ AppServerModule)
 /* harmony export */ });
-/* harmony import */ var _angular_platform_server__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-server */ 7014);
-/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.module */ 41);
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ 6846);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 9936);
+/* harmony import */ var _angular_platform_server__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-server */ 97014);
+/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.module */ 50041);
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ 96846);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 59936);
 var _class;
 
 
@@ -267,7 +281,7 @@ _class.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefi
 
 /***/ }),
 
-/***/ 3181:
+/***/ 73181:
 /*!******************************************!*\
   !*** ./src/app/core/constants/common.ts ***!
   \******************************************/
@@ -276,15 +290,19 @@ _class.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefi
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   TOKEN_KEY: () => (/* binding */ TOKEN_KEY),
+/* harmony export */   URL_API_BASE: () => (/* binding */ URL_API_BASE),
 /* harmony export */   WHATSAPP_LINK: () => (/* binding */ WHATSAPP_LINK),
 /* harmony export */   WHATSAPP_PHONE: () => (/* binding */ WHATSAPP_PHONE)
 /* harmony export */ });
 const WHATSAPP_PHONE = 3143528964;
 const WHATSAPP_LINK = "https://wa.me/57" + WHATSAPP_PHONE;
+const TOKEN_KEY = 'token_access';
+const URL_API_BASE = 'https://cifrado.com.co/backend/public/api';
 
 /***/ }),
 
-/***/ 180:
+/***/ 20180:
 /*!******************************************!*\
   !*** ./src/app/core/constants/routes.ts ***!
   \******************************************/
@@ -322,7 +340,7 @@ const PATHS_FULL_CLIENT = {
 
 /***/ }),
 
-/***/ 3718:
+/***/ 83718:
 /*!***********************************************************************!*\
   !*** ./src/app/shared/chat-me-whatsapp/chat-me-whatsapp.component.ts ***!
   \***********************************************************************/
@@ -333,9 +351,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ChatMeWhatsappComponent: () => (/* binding */ ChatMeWhatsappComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 4228);
-/* harmony import */ var _constants_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @constants/common */ 3181);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 9936);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 34228);
+/* harmony import */ var _constants_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @constants/common */ 73181);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 59936);
 var _class;
 
 
@@ -385,11 +403,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   NavBarComponent: () => (/* binding */ NavBarComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ 4228);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 8804);
-/* harmony import */ var _constants_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @constants/common */ 3181);
-/* harmony import */ var _constants_routes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @constants/routes */ 180);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 9936);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ 34228);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 68804);
+/* harmony import */ var _constants_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @constants/common */ 73181);
+/* harmony import */ var _constants_routes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @constants/routes */ 20180);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 59936);
 var _class;
 
 
@@ -455,7 +473,7 @@ _class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefi
 
 /***/ }),
 
-/***/ 8674:
+/***/ 49174:
 /*!****************************!*\
   !*** ./src/main.server.ts ***!
   \****************************/
@@ -466,12 +484,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AppServerModule: () => (/* reexport safe */ _app_app_server_module__WEBPACK_IMPORTED_MODULE_0__.AppServerModule)
 /* harmony export */ });
-/* harmony import */ var _app_app_server_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app/app.server.module */ 1463);
+/* harmony import */ var _app_app_server_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app/app.server.module */ 21463);
 
 
 /***/ }),
 
-/***/ 8967:
+/***/ 18967:
 /*!****************************************!*\
   !*** ./node_modules/express/lib/ sync ***!
   \****************************************/
@@ -484,12 +502,12 @@ function webpackEmptyContext(req) {
 }
 webpackEmptyContext.keys = () => ([]);
 webpackEmptyContext.resolve = webpackEmptyContext;
-webpackEmptyContext.id = 8967;
+webpackEmptyContext.id = 18967;
 module.exports = webpackEmptyContext;
 
 /***/ }),
 
-/***/ 852:
+/***/ 50852:
 /*!******************************!*\
   !*** external "async_hooks" ***!
   \******************************/
@@ -500,7 +518,7 @@ module.exports = require("async_hooks");
 
 /***/ }),
 
-/***/ 4300:
+/***/ 14300:
 /*!*************************!*\
   !*** external "buffer" ***!
   \*************************/
@@ -522,7 +540,7 @@ module.exports = require("crypto");
 
 /***/ }),
 
-/***/ 2361:
+/***/ 82361:
 /*!*************************!*\
   !*** external "events" ***!
   \*************************/
@@ -533,7 +551,7 @@ module.exports = require("events");
 
 /***/ }),
 
-/***/ 7147:
+/***/ 57147:
 /*!*********************!*\
   !*** external "fs" ***!
   \*********************/
@@ -544,7 +562,7 @@ module.exports = require("fs");
 
 /***/ }),
 
-/***/ 3685:
+/***/ 13685:
 /*!***********************!*\
   !*** external "http" ***!
   \***********************/
@@ -555,7 +573,7 @@ module.exports = require("http");
 
 /***/ }),
 
-/***/ 5687:
+/***/ 95687:
 /*!************************!*\
   !*** external "https" ***!
   \************************/
@@ -566,7 +584,7 @@ module.exports = require("https");
 
 /***/ }),
 
-/***/ 1808:
+/***/ 41808:
 /*!**********************!*\
   !*** external "net" ***!
   \**********************/
@@ -577,7 +595,7 @@ module.exports = require("net");
 
 /***/ }),
 
-/***/ 7561:
+/***/ 87561:
 /*!**************************!*\
   !*** external "node:fs" ***!
   \**************************/
@@ -588,7 +606,7 @@ module.exports = require("node:fs");
 
 /***/ }),
 
-/***/ 9411:
+/***/ 49411:
 /*!****************************!*\
   !*** external "node:path" ***!
   \****************************/
@@ -599,7 +617,7 @@ module.exports = require("node:path");
 
 /***/ }),
 
-/***/ 2037:
+/***/ 22037:
 /*!*********************!*\
   !*** external "os" ***!
   \*********************/
@@ -610,7 +628,7 @@ module.exports = require("os");
 
 /***/ }),
 
-/***/ 4822:
+/***/ 71017:
 /*!***********************!*\
   !*** external "path" ***!
   \***********************/
@@ -621,7 +639,7 @@ module.exports = require("path");
 
 /***/ }),
 
-/***/ 3477:
+/***/ 63477:
 /*!******************************!*\
   !*** external "querystring" ***!
   \******************************/
@@ -632,7 +650,7 @@ module.exports = require("querystring");
 
 /***/ }),
 
-/***/ 2781:
+/***/ 12781:
 /*!*************************!*\
   !*** external "stream" ***!
   \*************************/
@@ -643,7 +661,7 @@ module.exports = require("stream");
 
 /***/ }),
 
-/***/ 1576:
+/***/ 71576:
 /*!*********************************!*\
   !*** external "string_decoder" ***!
   \*********************************/
@@ -654,7 +672,7 @@ module.exports = require("string_decoder");
 
 /***/ }),
 
-/***/ 9512:
+/***/ 39512:
 /*!*************************!*\
   !*** external "timers" ***!
   \*************************/
@@ -665,7 +683,7 @@ module.exports = require("timers");
 
 /***/ }),
 
-/***/ 6224:
+/***/ 76224:
 /*!**********************!*\
   !*** external "tty" ***!
   \**********************/
@@ -676,7 +694,7 @@ module.exports = require("tty");
 
 /***/ }),
 
-/***/ 7310:
+/***/ 57310:
 /*!**********************!*\
   !*** external "url" ***!
   \**********************/
@@ -687,7 +705,7 @@ module.exports = require("url");
 
 /***/ }),
 
-/***/ 3837:
+/***/ 73837:
 /*!***********************!*\
   !*** external "util" ***!
   \***********************/
@@ -698,7 +716,7 @@ module.exports = require("util");
 
 /***/ }),
 
-/***/ 9796:
+/***/ 59796:
 /*!***********************!*\
   !*** external "zlib" ***!
   \***********************/
@@ -745,8 +763,8 @@ module.exports = require("zlib");
 /******/ 	__webpack_require__.x = () => {
 /******/ 		// Load entry module and return exports
 /******/ 		// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 		__webpack_require__.O(undefined, [736], () => (__webpack_require__(6394)))
-/******/ 		var __webpack_exports__ = __webpack_require__.O(undefined, [736], () => (__webpack_require__(4991)))
+/******/ 		__webpack_require__.O(undefined, [736], () => (__webpack_require__(56394)))
+/******/ 		var __webpack_exports__ = __webpack_require__.O(undefined, [736], () => (__webpack_require__(34991)))
 /******/ 		__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 		return __webpack_exports__;
 /******/ 	};

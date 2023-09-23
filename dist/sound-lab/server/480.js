@@ -2,7 +2,7 @@ exports.id = 480;
 exports.ids = [480];
 exports.modules = {
 
-/***/ 1480:
+/***/ 41480:
 /*!***************************************!*\
   !*** ./node_modules/xhr2/lib/xhr2.js ***!
   \***************************************/
@@ -123,10 +123,10 @@ exports.modules = {
   // in the list of files given to coffee --join, so it can use the
   // XMLHttpRequestEventTarget definition and so that the other files can assume
   // that XMLHttpRequest was already defined.
-  http = __webpack_require__(/*! http */ 3685);
-  https = __webpack_require__(/*! https */ 5687);
-  os = __webpack_require__(/*! os */ 2037);
-  url = __webpack_require__(/*! url */ 7310);
+  http = __webpack_require__(/*! http */ 13685);
+  https = __webpack_require__(/*! https */ 95687);
+  os = __webpack_require__(/*! os */ 22037);
+  url = __webpack_require__(/*! url */ 57310);
   XMLHttpRequest = function () {
     // The ECMAScript HTTP API.
 

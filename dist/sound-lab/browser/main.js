@@ -59,8 +59,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AppComponent: () => (/* binding */ AppComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 1699);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 7947);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ 8071);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 6575);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ 7947);
 /* harmony import */ var _shared_chat_me_whatsapp_chat_me_whatsapp_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./shared/chat-me-whatsapp/chat-me-whatsapp.component */ 9688);
 /* harmony import */ var _shared_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./shared/nav-bar/nav-bar.component */ 5433);
 var _class;
@@ -68,16 +70,22 @@ var _class;
 
 
 
+
+
+
 class AppComponent {
-  constructor() {
+  constructor(platformId) {
+    this.platformId = platformId;
     this.title = 'sound-lab';
+    AppComponent.isBrowser.next((0,_angular_common__WEBPACK_IMPORTED_MODULE_2__.isPlatformBrowser)(platformId));
   }
 }
 _class = AppComponent;
+_class.isBrowser = new rxjs__WEBPACK_IMPORTED_MODULE_3__.BehaviorSubject(false);
 _class.ɵfac = function AppComponent_Factory(t) {
-  return new (t || _class)();
+  return new (t || _class)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__.PLATFORM_ID));
 };
-_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({
   type: _class,
   selectors: [["app-root"]],
   decls: 4,
@@ -85,12 +93,12 @@ _class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefi
   consts: [[1, "w-full", "h-screen"]],
   template: function AppComponent_Template(rf, ctx) {
     if (rf & 1) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "main", 0);
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "app-nav-bar")(2, "router-outlet")(3, "app-chat-me-whatsapp");
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "main", 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "app-nav-bar")(2, "router-outlet")(3, "app-chat-me-whatsapp");
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
     }
   },
-  dependencies: [_angular_router__WEBPACK_IMPORTED_MODULE_3__.RouterOutlet, _shared_chat_me_whatsapp_chat_me_whatsapp_component__WEBPACK_IMPORTED_MODULE_0__.ChatMeWhatsappComponent, _shared_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_1__.NavBarComponent],
+  dependencies: [_angular_router__WEBPACK_IMPORTED_MODULE_5__.RouterOutlet, _shared_chat_me_whatsapp_chat_me_whatsapp_component__WEBPACK_IMPORTED_MODULE_0__.ChatMeWhatsappComponent, _shared_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_1__.NavBarComponent],
   styles: ["main[_ngcontent-%COMP%] {\n  background-image: url('bg-movil.webp');\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n@media (min-width: 900px) {\n  main[_ngcontent-%COMP%] {\n    background-image: url('bg-pc.webp');\n  }\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usc0NBQTZEO0VBQzdELDJCQUEyQjtFQUMzQiw0QkFBNEI7RUFDNUIsc0JBQXNCO0FBQ3hCOztBQUVBO0VBQ0U7SUFDRSxtQ0FBMEQ7RUFDNUQ7QUFDRiIsImZpbGUiOiJhcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIm1haW4ge1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi9hc3NldHMvaW1nL2JhY2tncm91bmQvYmctbW92aWwud2VicCk7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDkwMHB4KSB7XHJcbiAgbWFpbiB7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoLi4vYXNzZXRzL2ltZy9iYWNrZ3JvdW5kL2JnLXBjLndlYnApO1xyXG4gIH1cclxufVxyXG4iXX0= */\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxzQ0FBNkQ7RUFDN0QsMkJBQTJCO0VBQzNCLDRCQUE0QjtFQUM1QixzQkFBc0I7QUFDeEI7O0FBRUE7RUFDRTtJQUNFLG1DQUEwRDtFQUM1RDtBQUNGOztBQUVBLDR1QkFBNHVCIiwic291cmNlc0NvbnRlbnQiOlsibWFpbiB7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKC4uL2Fzc2V0cy9pbWcvYmFja2dyb3VuZC9iZy1tb3ZpbC53ZWJwKTtcclxuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG59XHJcblxyXG5AbWVkaWEgKG1pbi13aWR0aDogOTAwcHgpIHtcclxuICBtYWluIHtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi9hc3NldHMvaW1nL2JhY2tncm91bmQvYmctcGMud2VicCk7XHJcbiAgfVxyXG59XHJcbiJdLCJzb3VyY2VSb290IjoiIn0= */"]
 });
 
@@ -107,12 +115,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   AppModule: () => (/* binding */ AppModule)
 /* harmony export */ });
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ 6480);
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser/animations */ 4987);
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-toastr */ 7548);
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app-routing.module */ 3966);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ 6401);
 /* harmony import */ var _shared_chat_me_whatsapp_chat_me_whatsapp_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @shared/chat-me-whatsapp/chat-me-whatsapp.component */ 9688);
 /* harmony import */ var _shared_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @shared/nav-bar/nav-bar.component */ 5433);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 1699);
 var _class;
+
+
+
 
 
 
@@ -129,12 +142,12 @@ _class.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefi
   bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent]
 });
 _class.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjector"]({
-  imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.BrowserModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule, _shared_chat_me_whatsapp_chat_me_whatsapp_component__WEBPACK_IMPORTED_MODULE_2__.ChatMeWhatsappComponent, _shared_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_3__.NavBarComponent]
+  imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.BrowserModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__.BrowserAnimationsModule, ngx_toastr__WEBPACK_IMPORTED_MODULE_7__.ToastrModule.forRoot(), _shared_chat_me_whatsapp_chat_me_whatsapp_component__WEBPACK_IMPORTED_MODULE_2__.ChatMeWhatsappComponent, _shared_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_3__.NavBarComponent]
 });
 (function () {
   (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵsetNgModuleScope"](AppModule, {
     declarations: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent],
-    imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.BrowserModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule, _shared_chat_me_whatsapp_chat_me_whatsapp_component__WEBPACK_IMPORTED_MODULE_2__.ChatMeWhatsappComponent, _shared_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_3__.NavBarComponent]
+    imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.BrowserModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__.BrowserAnimationsModule, ngx_toastr__WEBPACK_IMPORTED_MODULE_7__.ToastrModule, _shared_chat_me_whatsapp_chat_me_whatsapp_component__WEBPACK_IMPORTED_MODULE_2__.ChatMeWhatsappComponent, _shared_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_3__.NavBarComponent]
   });
 })();
 
@@ -148,11 +161,15 @@ _class.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefi
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   TOKEN_KEY: () => (/* binding */ TOKEN_KEY),
+/* harmony export */   URL_API_BASE: () => (/* binding */ URL_API_BASE),
 /* harmony export */   WHATSAPP_LINK: () => (/* binding */ WHATSAPP_LINK),
 /* harmony export */   WHATSAPP_PHONE: () => (/* binding */ WHATSAPP_PHONE)
 /* harmony export */ });
 const WHATSAPP_PHONE = 3143528964;
 const WHATSAPP_LINK = "https://wa.me/57" + WHATSAPP_PHONE;
+const TOKEN_KEY = 'token_access';
+const URL_API_BASE = 'https://cifrado.com.co/backend/public/api';
 
 /***/ }),
 

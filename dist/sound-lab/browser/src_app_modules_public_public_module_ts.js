@@ -1,7 +1,7 @@
 "use strict";
 (self["webpackChunksound_lab"] = self["webpackChunksound_lab"] || []).push([["src_app_modules_public_public_module_ts"],{
 
-/***/ 570:
+/***/ 7570:
 /*!******************************************************************************!*\
   !*** ./src/app/modules/public/Components/email-form/email-form.component.ts ***!
   \******************************************************************************/
@@ -46,27 +46,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ContactMeComponent: () => (/* binding */ ContactMeComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _Components_email_form_email_form_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Components/email-form/email-form.component */ 7570);
 var _class;
+
 
 class ContactMeComponent {}
 _class = ContactMeComponent;
 _class.ɵfac = function ContactMeComponent_Factory(t) {
   return new (t || _class)();
 };
-_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
   type: _class,
   selectors: [["app-contact-me"]],
   decls: 2,
   vars: 0,
-  consts: [[1, "bg-white"]],
+  consts: [[1, "h-[calc(100%_-_64px)]", "w-full", "flex", "items-center", "justify-center", "py-12"]],
   template: function ContactMeComponent_Template(rf, ctx) {
     if (rf & 1) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h1", 0);
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "contact-me works!");
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "section", 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "app-email-form");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     }
   },
+  dependencies: [_Components_email_form_email_form_component__WEBPACK_IMPORTED_MODULE_0__.EmailFormComponent],
   encapsulation: 2
 });
 
@@ -122,7 +125,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sub_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sub-routing.module */ 930);
 /* harmony import */ var _Views_contact_me_contact_me_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Views/contact-me/contact-me.component */ 6529);
 /* harmony import */ var _Views_home_home_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Views/home/home.component */ 7244);
-/* harmony import */ var _Components_email_form_email_form_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Components/email-form/email-form.component */ 570);
+/* harmony import */ var _Components_email_form_email_form_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Components/email-form/email-form.component */ 7570);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 1699);
 var _class;
 
