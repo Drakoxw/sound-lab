@@ -114,3 +114,26 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+.scroller::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #f3b7b7;
+	border-radius: 5px;
+}
+
+.scroller::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: transparent;
+}
+
+.scroller::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(151, 52, 60)),
+									   color-stop(0.72, rgb(156, 56, 106)),
+									   color-stop(0.86, rgb(148, 28, 74)));
+}

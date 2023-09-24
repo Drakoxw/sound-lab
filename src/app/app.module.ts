@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ToastrModule } from 'ngx-toastr';
 
@@ -18,6 +19,7 @@ import { NavBarComponent } from '@shared/nav-bar/nav-bar.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     ToastrModule.forRoot(),
     ChatMeWhatsappComponent,
     NavBarComponent
