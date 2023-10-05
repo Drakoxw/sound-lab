@@ -1,14 +1,8 @@
 
 main {
-  background-image: url(../assets/img/background/bg-movil.webp);
+  background-image: url(../assets/img/background/Fondo.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-}
-
-@media (min-width: 900px) {
-  main {
-    background-image: url(../assets/img/background/bg-pc.webp);
-  }
 }
