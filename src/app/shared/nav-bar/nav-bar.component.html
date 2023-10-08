@@ -1,8 +1,8 @@
 <nav
-  class="relative flex w-full flex-nowrap items-end justify-between py-2 text-gray-200 shadow-lg hover:text-white focus:text-white lg:flex-wrap lg:justify-end lg:py-4 bg-black bg-opacity-20"
+  class="h-16 relative flex w-full flex-nowrap items-end justify-between py-2 text-gray-200 shadow-lg hover:text-white focus:text-white lg:flex-wrap lg:justify-end lg:py-4 bg-black bg-opacity-20"
   data-te-navbar-ref
 >
-  <div class="flex w-full flex-wrap items-end justify-end">
+  <div class="hidden flexxs w-full flex-wrap items-end justify-end">
     <!-- Hamburger button for mobile view -->
     <button
       (click)="showNavbar = !showNavbar"
@@ -36,7 +36,7 @@
       <!-- Left links -->
       <ul
         (click)="showNavbar = !showNavbar"
-        class="flex list-style-none absolute w-full lg:static z-50 ml-auto bg-black bg-opacity-90 lg:bg-transparent lg:bg-opacity-100 flex-col pl-0 lg:mt-1 lg:flex-row text-gray-400 lg:mr-4 lg:justify-end"
+        class="hidden flexx list-style-none absolute w-full lg:static z-50 ml-auto bg-black bg-opacity-90 lg:bg-transparent lg:bg-opacity-100 flex-col pl-0 lg:mt-1 lg:flex-row text-gray-400 lg:mr-4 lg:justify-end"
       >
         <a [routerLink]="routes.home" routerLinkActive #rlH="routerLinkActive">
           <li
