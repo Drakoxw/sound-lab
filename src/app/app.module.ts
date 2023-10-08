@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 
 import { ChatMeWhatsappComponent } from '@shared/chat-me-whatsapp/chat-me-whatsapp.component';
 import { NavBarComponent } from '@shared/nav-bar/nav-bar.component';
+import { FooterComponent } from '@shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NavBarComponent } from '@shared/nav-bar/nav-bar.component';
     HttpClientModule,
     ToastrModule.forRoot(),
     ChatMeWhatsappComponent,
-    NavBarComponent
+    NavBarComponent,
+    FooterComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
