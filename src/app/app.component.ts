@@ -19,6 +19,7 @@ export class AppComponent {
       'Servicio técnico, repuestos y accesorios para DJs Alquiler, venta y programación Pixel Led, Pantallas Led, Cabezas móviles',
     openingHours: 'Mo-Fr 07:00-23:00',
     telephone: `+57 ${WHATSAPP_PHONE}`,
+    image: "https://www.cifrado.com.co/sound-lab/sound-lab-icon.png",
     address: {
       '@type': 'PostalAddress',
       streetAddress:
