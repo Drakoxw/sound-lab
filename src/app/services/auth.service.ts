@@ -1,8 +1,8 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Injectable, inject } from '@angular/core';
+import { Injectable, inject, signal } from '@angular/core';
 import { Observable, catchError, map, of } from 'rxjs';
 
-import { ErrorsResponse, LoginResponse } from '@interfaces/responses';
+import { DataLogin, ErrorsResponse, LoginResponse } from '@interfaces/responses';
 import { LocalstorageService } from '@services/localstorage.service';
 import { LoginRequest } from '@interfaces/index';
 import { URL_API_BASE } from '@constants/common';
@@ -12,10 +12,18 @@ import { URL_API_BASE } from '@constants/common';
 })
 export class AuthService {
 
+  // readonly
+  admin = signal(false);
+
   private http = inject(HttpClient)
   private localStorage = inject(LocalstorageService)
-
   private url = URL_API_BASE;
+
+  private sesion!:DataLogin;
+
+  getSession(): DataLogin|null {
+    return this.sesion || null;
+  }
 
   /**
    * No importar!
@@ -40,11 +48,13 @@ export class AuthService {
     msg: string
   }> {
     const res = { error: false, msg: '' };
-    return this.http.post<LoginResponse>(`${this.url}/auth`, payload)
+    return this.http.post<LoginResponse>(`${this.url}/auth/login`, payload)
       .pipe(
         map((r) => {
           this.localStorage.setToken(r.data.token)
           res.msg = r.message;
+          this.sesion = r.data;
+          if (this.sesion.rol === 'SuperAdmin') { this.admin.set(true); }
           return res;
         }),
         catchError(this.error)

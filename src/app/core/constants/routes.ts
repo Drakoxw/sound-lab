@@ -3,8 +3,8 @@ export interface RoutesClient {
   home: string;
   contactUs: string;
   developer: string;
-  // login: string;
-  // listClients: string;
+  login: string;
+  admin: string;
 }
 
 export const MODULES = {
@@ -12,15 +12,14 @@ export const MODULES = {
   USER: 'user',
 };
 
-// RUTAS DEL CLIENTE EN MODULO
+// RUTAS EN EL ROUTING DEL MODULO
 export const PATHS_MODULE_CLIENT: RoutesClient = {
   root: '',
   home: 'inicio',
   contactUs: 'contactanos',
   developer: 'desarrollador',
-  // aboutUs: 'quienes-somos',
-  // login: 'login',
-  // listClients: 'list-clients'
+  login: 'login',
+  admin: 'admin'
 };
 
 // RUTAS COMPLETAS PARA EL ROUTE LINK
@@ -28,8 +27,7 @@ export const PATHS_FULL_CLIENT: RoutesClient = {
   root: '',
   home: `${MODULES.PUBLIC}/${PATHS_MODULE_CLIENT.home}`,
   contactUs: `${MODULES.PUBLIC}/${PATHS_MODULE_CLIENT.contactUs}`,
+  login: `${MODULES.PUBLIC}/${PATHS_MODULE_CLIENT.login}`,
   developer: `${MODULES.USER}/${PATHS_MODULE_CLIENT.developer}`,
-  // aboutUs: `${MODULES.PUBLIC}/${PATHS_MODULE_CLIENT.aboutUs}`,
-  // login: `${MODULES.USER}/${PATHS_MODULE_CLIENT.login}`,
-  // listClients: `${MODULES.USER}/${PATHS_MODULE_CLIENT.listClients}`,
+  admin: `${MODULES.USER}/${PATHS_MODULE_CLIENT.admin}`
 };

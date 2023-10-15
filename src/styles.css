@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.isView {
+  width: 100vw;
+  height: calc(100vh - 64px);
+}
+
 * {
   padding: 0;
   margin: 0;

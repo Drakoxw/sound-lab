@@ -8,6 +8,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('@modulePublic/public.module').then((m) => m.PublicModule),
   },
+  {
+    path: MODULES.USER,
+    loadChildren: () =>
+      import('@moduleClient/client.module').then((m) => m.ClientModule),
+  },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 

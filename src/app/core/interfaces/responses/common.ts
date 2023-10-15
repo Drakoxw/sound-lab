@@ -1,6 +1,6 @@
 
 export interface ResponseBase {
-  status: string
+  success: boolean
   message: string
   data: any
 }

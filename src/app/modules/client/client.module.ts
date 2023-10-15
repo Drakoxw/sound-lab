@@ -6,10 +6,12 @@ import { SubRoutingModule } from '@moduleClient/sub-routing.module';
 import { ButtonComponent } from '@shared/button/button.component';
 
 import { DeveloperComponent } from '@moduleClient/Views/developer/developer.component';
+import { AdminViewComponent } from './Views/admin-view/admin-view.component';
 
 @NgModule({
   declarations: [
-    DeveloperComponent
+    DeveloperComponent,
+    AdminViewComponent
   ],
   imports: [
     CommonModule,
