@@ -1,0 +1,34 @@
+<section>
+  <form
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+    class="rounded-md bg-white bg-opacity-70 max-w-[580px] mt-4 p-4 w-auto text-[#2f3f50]"
+  >
+    <form-input
+      placeholder="Nombre"
+      formControlName="name"
+      label="Nombre"
+    ></form-input>
+
+    <form-input
+      placeholder="Describe el producto"
+      formControlName="description"
+      label="Descripcion"
+    ></form-input>
+
+    <div *ngIf="checkboxes.length > 0" class="flex gap-2">
+      <ng-container
+        *ngFor="let item of checkboxes; let i = index"
+        formArrayName="tags"
+      >
+        <label class="cursor-pointer" (click)="updateCheckboxes()">
+          <input type="checkbox" [formControlName]="i" />&nbsp;{{ item.name }}
+        </label>
+      </ng-container>
+    </div>
+
+    <form-input-file (change)="loadBase64($event)" label="Cargar imagen" />
+
+    <app-button type="submit">Guardar</app-button>
+  </form>
+</section>

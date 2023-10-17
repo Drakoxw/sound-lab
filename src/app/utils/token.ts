@@ -1,23 +1,19 @@
 export interface ITokenPayload {
-  iss: string
   aud: string
   data: string
-  enterprise: number
   exp: number
-  i_idusuario: number
-  statusCliente: string
-  usuario: string
+  iss: string
+  rol: string
+  user: string
 }
 
 export const tokenVoid: ITokenPayload = {
-  iss: '',
-  aud: '',
-  data: '',
-  exp: 100000000,
-  i_idusuario: 0,
-  statusCliente: '',
-  usuario: '',
-  enterprise: 0
+  aud: "",
+  data: "",
+  exp: 0,
+  iss: "",
+  rol: "",
+  user: ""
 }
 
 /**
@@ -48,4 +44,9 @@ function parseJwt(token: string): ITokenPayload | undefined {
   return undefined
 }
 
-export { parseJwt }
+function hasTokenExpired(token: ITokenPayload): boolean {
+  const expirationDate = new Date(token.exp * 1000)
+  return expirationDate < new Date()
+}
+
+export { parseJwt, hasTokenExpired }

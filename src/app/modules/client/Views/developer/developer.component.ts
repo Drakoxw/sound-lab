@@ -8,14 +8,7 @@ import { AuthService } from '@services/index';
   templateUrl: './developer.component.html',
   styleUrls: ['./developer.component.css']
 })
-export class DeveloperComponent implements OnInit {
+export class DeveloperComponent {
   public authService = inject(AuthService)
-  private router = inject(Router)
-
-  ngOnInit(): void {
-    if (!this.authService.admin()) {
-      this.router.navigate([PATHS_MODULE_CLIENT.root]);
-    }
-  }
 
 }

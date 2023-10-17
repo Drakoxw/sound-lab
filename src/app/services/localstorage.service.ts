@@ -59,6 +59,10 @@ export class LocalstorageService implements Storage {
     this.tokenString = token;
     this.setItem(TOKEN_KEY, token);
   }
+  /** Borrar el token */
+  deleteToken(): void {
+    this.removeItem(TOKEN_KEY);
+  }
 
   clear(): void {
     this.storage.clear();

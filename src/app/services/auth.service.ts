@@ -6,20 +6,40 @@ import { DataLogin, ErrorsResponse, LoginResponse } from '@interfaces/responses'
 import { LocalstorageService } from '@services/localstorage.service';
 import { LoginRequest } from '@interfaces/index';
 import { URL_API_BASE } from '@constants/common';
+import { ITokenPayload, parseJwt } from '@utils/token';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  // readonly
-  admin = signal(false);
-
   private http = inject(HttpClient)
   private localStorage = inject(LocalstorageService)
-  private url = URL_API_BASE;
 
-  private sesion!:DataLogin;
+  readonly admin = signal(false);
+  readonly isLogged = signal(false);
+
+  private url = URL_API_BASE;
+  private sesion?:DataLogin|null = null;
+
+  resetSesion() {
+    this.sesion = null;
+    this.admin.set(false);
+    this.isLogged.set(false);
+    this.localStorage.deleteToken();
+  }
+
+  getDataToken(): ITokenPayload | null {
+    const parse = parseJwt(this.localStorage.getToken())
+    if (parse) {
+      this.isLogged.set(true)
+      if (parse.rol.toLowerCase().includes('admin')) {
+        this.admin.set(true);
+      }
+      return parse;
+    }
+    return null
+  }
 
   getSession(): DataLogin|null {
     return this.sesion || null;
@@ -31,6 +51,7 @@ export class AuthService {
    */
   private error(err: HttpErrorResponse) {
     let errorMessage = '';
+    this.isLogged.set(false);
     if (err.error instanceof ErrorEvent) {
       errorMessage = err.error.message;
     } else {
@@ -55,6 +76,7 @@ export class AuthService {
           res.msg = r.message;
           this.sesion = r.data;
           if (this.sesion.rol === 'SuperAdmin') { this.admin.set(true); }
+          this.isLogged.set(true);
           return res;
         }),
         catchError(this.error)

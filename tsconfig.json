@@ -30,6 +30,7 @@
       "@constants/*": ["src/app/core/constants/*"],
       "@interfaces/*": ["src/app/core/interfaces/*"],
       "@mocks/*": ["src/app/core/mocks/*"],
+      "@guard/*": ["src/app/core/guard/*"],
       "@moduleClient/*": ["src/app/modules/client/*"],
       "@modulePublic/*": ["src/app/modules/public/*"],
       "@src/*": ["src/*"]

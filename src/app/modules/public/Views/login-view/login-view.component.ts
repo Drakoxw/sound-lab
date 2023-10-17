@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -19,7 +19,7 @@ type TypeForm = {
   selector: 'app-login-view',
   templateUrl: './login-view.component.html',
 })
-export class LoginViewComponent {
+export class LoginViewComponent implements OnInit {
   form: FormGroup<TypeForm>;
   load: boolean = false;
 
@@ -35,12 +35,17 @@ export class LoginViewComponent {
     });
   }
 
+  ngOnInit(): void {
+    this.auth.resetSesion()
+  }
+
   onSubmit() {
     if (this.form.invalid) {
       this.form.markAllAsTouched();
       this.toastr.warning('Faltan Campos Obligatorios!', 'Error');
       return;
     }
+    this.load = true;
     const payload: LoginRequest = {
       user: String(this.form.value.user),
       pass: String(this.form.value.pass),
@@ -52,6 +57,7 @@ export class LoginViewComponent {
       }
       this.toastr.success('Bienvenido!');
       this.form.reset();
+      this.load = false;
       this.router.navigate([PATHS_FULL_CLIENT.admin]);
     });
   }

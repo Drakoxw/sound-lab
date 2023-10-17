@@ -1,0 +1,18 @@
+<div class="w-full">
+  <label *ngIf="label"
+    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+    for="default_size"
+    >{{label}}</label
+  >
+
+  <input
+    type="file"
+    (change)="onChange($event)"
+    class="bg-gray-100 block border border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:border-blue-500 dark:focus:ring-blue-500 dark:placeholder-gray-400 dark:text-gray-400 focus:border-blue-500 focus:ring-blue-500 mb-6 rounded-lg text-gray-900 text-sm w-full
+      file:mr-4 file:py-2 file:px-4
+      file:rounded-md file:border-0
+      file:text-sm file:font-semibold
+      file:bg-blue-500 file:text-white
+      hover:file:bg-blue-600
+    "/>
+</div>
