@@ -11,15 +11,16 @@ import { Base64 } from '@interfaces/index';
   styleUrls: ['./form-input-file.component.css']
 })
 export class FormInputFileComponent {
-  @Output() change = new EventEmitter<Base64>();
+  @Output() changeFile = new EventEmitter<Base64>();
   @Input() placeholder: string = '';
+  @Input() basic: boolean = false;
 
   @Input() label: string = '';
 
   async onChange(ev: Event) {
     const file = (ev as any).target.files[0];
     const base = await convertFileToBase64(file)
-    this.change.emit(base);
+    this.changeFile.emit(base);
   }
 
 }

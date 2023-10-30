@@ -16,6 +16,11 @@ type TypeForm = {
   tags: FormArray
 };
 
+type Checkbox = {
+  name: string,
+  value: boolean,
+}
+
 @Component({
   selector: 'app-create-item-store',
   templateUrl: './create-item-store.component.html',
@@ -28,13 +33,11 @@ export class CreateItemStoreComponent implements OnInit {
   private toastr = inject(ToastrAlertService);
   private httpServ = inject(HttpService);
 
-  checkboxes = [
+  imgPrincipal = '../../../../../assets/img/imagen-default.png'
+  attachedImages: string[] = []
+  checkboxes: Checkbox[] = [
     {
-      name: 'Value Z',
-      value: false,
-    },
-    {
-      name: 'Value X',
+      name: 'Cargando...',
       value: false,
     }
   ];
@@ -48,28 +51,21 @@ export class CreateItemStoreComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      const boxes = [
-        {
-          name: 'Value 1',
-          value: false,
-        },
-        {
-          name: 'Value 2',
-          value: false,
-        },
-        {
-          name: 'Value 3',
-          value: false,
-        },
-        {
-          name: 'Value 4',
-          value: false,
+    this.httpServ.listTags().subscribe(res => {
+      if (!res.error && res.data) {
+        if (res.data.length) {
+          this.checkboxes = res.data.map(el => {
+            return {
+              name: el.name,
+              value: false,
+            }
+          });
         }
-      ]
-      this.checkboxes = boxes;
-      this.form.setControl('tags', this.fb.array(this.checkboxes.map(x => x.value)));
-    }, 3000)
+        this.form.setControl('tags', this.fb.array(this.checkboxes.map(x => x.value)));
+      } else {
+        this.toastr.error(res.msg);
+      }
+    })
   }
 
   updateCheckboxes() {
@@ -88,7 +84,12 @@ export class CreateItemStoreComponent implements OnInit {
   }
 
   loadBase64(base: Base64) {
-    console.log(base);
+    console.log('base',base);
+    // this.imgPrincipal = `data:image/${base.mimeType},${base.base64}`
+    this.imgPrincipal = `data:image/png;base64,${base.base64}`
+  }
 
+  newImage(base: Base64) {
+    this.attachedImages.push(`data:image/png;base64,${base.base64}`)
   }
 }

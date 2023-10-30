@@ -1,34 +1,77 @@
-<section>
+<section class="w-full flex justify-center items-center">
   <form
     [formGroup]="form"
     (ngSubmit)="onSubmit()"
     class="rounded-md bg-white bg-opacity-70 max-w-[580px] mt-4 p-4 w-auto text-[#2f3f50]"
   >
-    <form-input
-      placeholder="Nombre"
-      formControlName="name"
-      label="Nombre"
-    ></form-input>
+    <div class="flex w-full justify-between items-center gap-4">
+      <div class="w-[calc(100%_-_11rem)]">
+        <form-input
+          placeholder="Nombre"
+          formControlName="name"
+          label="Nombre"
+        ></form-input>
 
-    <form-input
-      placeholder="Describe el producto"
-      formControlName="description"
-      label="Descripcion"
-    ></form-input>
+        <form-input
+          placeholder="Describe el producto"
+          formControlName="description"
+          label="Descripcion"
+        ></form-input>
+      </div>
 
-    <div *ngIf="checkboxes.length > 0" class="flex gap-2">
-      <ng-container
-        *ngFor="let item of checkboxes; let i = index"
-        formArrayName="tags"
-      >
-        <label class="cursor-pointer" (click)="updateCheckboxes()">
-          <input type="checkbox" [formControlName]="i" />&nbsp;{{ item.name }}
-        </label>
-      </ng-container>
+      <picture class="overflow-auto scroller">
+        <label
+          class="block dark:text-white font-medium mb-2 text-gray-900 text-sm"
+          >Imagen Principal</label
+        >
+        <img class="w-40 h-40" [src]="imgPrincipal" alt="imagen" />
+      </picture>
     </div>
 
-    <form-input-file (change)="loadBase64($event)" label="Cargar imagen" />
+    <div
+      *ngIf="attachedImages.length"
+      class="flex w-full gap-2 my-2 overflow-auto"
+    >
+      <picture *ngFor="let item of attachedImages">
+        <img class="w-12 h-12" [src]="item" alt="imagen segundaria" />
+      </picture>
+    </div>
 
-    <app-button type="submit">Guardar</app-button>
+    <fieldset
+      *ngIf="checkboxes.length > 0"
+      class="rounded-md p-2 border-solid border-[1px] border-gray-500"
+    >
+      <legend
+        class="block dark:text-gray-400 font-medium bg-gray-100 text-gray-900 text-sm rounded-md px-2 border-solid border-[1px] border-gray-500"
+      >
+        Seleciona las Tags
+      </legend>
+      <div class="flex gap-2 flex-wrap">
+        <ng-container
+          *ngFor="let item of checkboxes; let i = index"
+          formArrayName="tags"
+        >
+          <label class="cursor-pointer" (click)="updateCheckboxes()">
+            <input type="checkbox" [formControlName]="i" />&nbsp;{{ item.name }}
+          </label>
+        </ng-container>
+      </div>
+    </fieldset>
+
+    <div class="flex gap-2 w-full mt-4 justify-between items-end">
+      <form-input-file
+        class="w-full"
+        (changeFile)="loadBase64($event)"
+        label="Cargar Imagen Principal"
+      />
+
+      <form-input-file
+        (changeFile)="newImage($event)"
+        [basic]="true"
+        label="ok"
+      />
+    </div>
+
+    <app-button class="mt-4" type="submit">Guardar</app-button>
   </form>
 </section>

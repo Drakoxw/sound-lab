@@ -12,10 +12,7 @@ const convertFileToBase64 = (file: File): Promise<Base64> => {
 
     reader.onloadend = () => {
       if (reader.result && typeof reader.result === 'string') {
-        console.log(reader)
-        base.base64 = reader.result
-          .replace('data:', '')
-          .replace(/^.+,/, '')
+        base.base64 = reader.result.split(',')[1]
 
         return resolve(base)
       }
