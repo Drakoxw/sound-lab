@@ -7,6 +7,7 @@ import { LocalstorageService } from '@services/localstorage.service';
 import { LoginRequest } from '@interfaces/index';
 import { URL_API_BASE } from '@constants/common';
 import { ITokenPayload, parseJwt } from '@utils/token';
+import { logDev } from '@utils/console';
 
 @Injectable({
   providedIn: 'root'
@@ -51,12 +52,11 @@ export class AuthService {
    */
   private error(err: HttpErrorResponse) {
     let errorMessage = '';
-    this.isLogged.set(false);
     if (err.error instanceof ErrorEvent) {
       errorMessage = err.error.message;
     } else {
-      err.error as unknown as ErrorsResponse
       errorMessage = `Error Code: ${err.status}\nMessage: ${err.message}`;
+      err.error as unknown as ErrorsResponse
       if (err.error.errors) {
         errorMessage = err.error.errors[0].detail;
       }

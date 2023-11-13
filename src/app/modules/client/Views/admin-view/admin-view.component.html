@@ -3,13 +3,22 @@
     <ul
       class="flex flex-wrap text-sm font-medium text-center text-gray-200 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
     >
-      <li *ngFor="let item of options" (click)="changeOption(item)"
-        class="hover:bg-pink-800 bg-opacity-80 hover:text-white px-4 py-1 cursor-pointer"
-      >{{item}}</li>
+      <li
+        *ngFor="let item of options"
+        (click)="changeOption(item)"
+        class="px-4 py-1 cursor-pointer"
+        [ngClass]="
+          seleted === item
+            ? 'bg-pink-800 bg-opacity-80 text-white'
+            : 'hover:bg-pink-800 bg-opacity-80 hover:text-white'
+        "
+      >
+        {{ item }}
+      </li>
     </ul>
   </div>
 
   <app-create-tags-admin *ngIf="seleted == optionsValues.tags" />
   <app-create-item-store *ngIf="seleted == optionsValues.itemStore" />
-
+  <app-admin-images *ngIf="seleted == optionsValues.images" />
 </section>

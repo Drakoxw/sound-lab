@@ -16,6 +16,7 @@
 ```
 >Example -> `ng g c modules/public/Views/ContactMe --style none --skip-tests`
 >Example -> `ng g c modules/public/Components/email-form --style none --skip-tests`
+>Example -> `ng g c modules/client/Components/AdminImages --style none --skip-tests --module=client`
 * --skip-tests
 * --style none
 

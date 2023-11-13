@@ -7,3 +7,5 @@ export const TOKEN_KEY = 'token_access'
 
 export const URL_API_BASE = 'https://cifrado.com.co/backend/public/api';
 
+export const IMG_DEFAULT = 'assets/img/imagen-default.png'
+

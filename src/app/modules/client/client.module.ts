@@ -13,6 +13,8 @@ import { CreateItemStoreComponent } from './Components/create-item-store/create-
 import { FormInputComponent } from '@shared/form-input/form-input.component';
 import { FormSelectComponent } from '@shared/form-select/form-select.component';
 import { FormInputFileComponent } from '@shared/form-input-file/form-input-file.component';
+import { AdminImagesComponent } from './Components/admin-images/admin-images.component';
+import { LoadingComponent } from '@shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { FormInputFileComponent } from '@shared/form-input-file/form-input-file.
     AdminViewComponent,
     ButtonDevComponent,
     CreateTagsAdminComponent,
-    CreateItemStoreComponent
+    CreateItemStoreComponent,
+    AdminImagesComponent,
   ],
   imports: [
     CommonModule,
@@ -30,7 +33,8 @@ import { FormInputFileComponent } from '@shared/form-input-file/form-input-file.
     FormsModule,
     FormInputComponent,
     FormSelectComponent,
-    FormInputFileComponent
-  ]
+    FormInputFileComponent,
+    LoadingComponent,
+  ],
 })
-export class ClientModule { }
+export class ClientModule {}

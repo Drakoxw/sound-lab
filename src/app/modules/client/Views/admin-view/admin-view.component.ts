@@ -3,6 +3,7 @@ import { Component, OnInit  } from '@angular/core';
 const optionsVals = {
   itemStore: 'Crear Item Store',
   tags: 'Crear etiquetas',
+  images: 'Administrar imagenes'
 }
 @Component({
   selector: 'app-admin-view',

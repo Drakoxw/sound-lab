@@ -51,13 +51,13 @@ export class LoginViewComponent implements OnInit {
       pass: String(this.form.value.pass),
     };
     this.auth.login(payload).subscribe((res) => {
+      this.load = false;
       if (res.error) {
         this.toastr.error(res.msg, 'Error');
         return;
       }
       this.toastr.success('Bienvenido!');
       this.form.reset();
-      this.load = false;
       this.router.navigate([PATHS_FULL_CLIENT.admin]);
     });
   }
