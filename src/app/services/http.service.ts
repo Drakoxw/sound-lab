@@ -12,10 +12,13 @@ import {
   NewImageResponse,
   NewItemStoreRequest,
   ErrorsResponse,
+  AssetsImageListResponse,
+  FileAssetsData,
 } from '@interfaces/index';
 import { URL_API_BASE } from '@constants/common';
 
 import { logDev } from '@utils/console';
+import { FileAssetsMock } from '@mocks/index';
 
 @Injectable({
   providedIn: 'root',
@@ -119,6 +122,24 @@ export class HttpService {
     const res = { error: false, msg: '', data: {} };
     return this.http
       .post<ResponseBase>(`${this.url}/store/items/new`, payload)
+      .pipe(
+        map((r) => {
+          res.msg = r.message;
+          res.data = r.data;
+          return res;
+        }),
+        catchError(this.error)
+      );
+  }
+
+  listAssets(): Observable<{
+    error: boolean;
+    msg: string;
+    data?: FileAssetsData[]
+  }> {
+    const res = { error: false, msg: '', data: [FileAssetsMock] };
+    return this.http
+      .get<AssetsImageListResponse>(`${this.url}/store/assets/list`)
       .pipe(
         map((r) => {
           res.msg = r.message;

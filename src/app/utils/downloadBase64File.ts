@@ -8,7 +8,7 @@ function downloadBase64File(props: Props): void {
   const {
     base64,
     contentType = 'application/pdf',
-    fileName = 'default'
+    fileName
   } = props
 
   const element = window.document.createElement('a')

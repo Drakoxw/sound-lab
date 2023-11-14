@@ -6,7 +6,7 @@
   width: 100vw;
   height: calc(100vh - 64px);
 }
-
+html { overflow: hidden; }
 * {
   padding: 0;
   margin: 0;

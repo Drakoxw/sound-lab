@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { AppComponent } from './app.component';
 
 import { ToastrModule } from 'ngx-toastr';
@@ -13,6 +14,7 @@ import { NavBarComponent } from '@shared/nav-bar/nav-bar.component';
 import { FooterComponent } from '@shared/footer/footer.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AuthorizationInterceptor } from './core/interceptors/authorization.interceptor';
+// import { BaseToStringPipe } from './core/pipes/base-to-string.pipe';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +25,7 @@ import { AuthorizationInterceptor } from './core/interceptors/authorization.inte
     BrowserAnimationsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
+    SweetAlert2Module.forRoot(),
     ChatMeWhatsappComponent,
     NavBarComponent,
     FooterComponent,
