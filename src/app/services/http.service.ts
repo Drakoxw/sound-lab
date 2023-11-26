@@ -14,6 +14,7 @@ import {
   ErrorsResponse,
   AssetsImageListResponse,
   FileAssetsData,
+  AdminImageRequest,
 } from '@interfaces/index';
 import { URL_API_BASE } from '@constants/common';
 
@@ -140,6 +141,24 @@ export class HttpService {
     const res = { error: false, msg: '', data: [FileAssetsMock] };
     return this.http
       .get<AssetsImageListResponse>(`${this.url}/store/assets/list`)
+      .pipe(
+        map((r) => {
+          res.msg = r.message;
+          res.data = r.data;
+          return res;
+        }),
+        catchError(this.error)
+      );
+  }
+
+  adminAssets(payload: AdminImageRequest): Observable<{
+    error: boolean;
+    msg: string;
+    data?: FileAssetsData[]
+  }> {
+    const res = { error: false, msg: '', data: [FileAssetsMock] };
+    return this.http
+      .post<ResponseBase>(`${this.url}/store/assets/admin`, payload)
       .pipe(
         map((r) => {
           res.msg = r.message;

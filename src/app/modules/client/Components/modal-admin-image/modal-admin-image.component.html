@@ -42,8 +42,8 @@
         Los cambios aqui realizados son irreversibles!.
       </p>
       <div class="flex justify-center items-center w-full gap-2">
-        <form-input-file (changeFile)="loadBase($event)" label="Cambiar la imagen" [typeButton]="true" />
-        <app-button (buttonClick)="deleteSwal.fire()" styleButton="red" >Eliminar archivo</app-button>
+        <form-input-file (changeFile)="loadBase($event)"  label="Cambiar la imagen" [typeButton]="true" />
+        <app-button (buttonClick)="activateDelete(DataFile.path)" styleButton="red" >Eliminar archivo</app-button>
       </div>
     </div>
   </div>

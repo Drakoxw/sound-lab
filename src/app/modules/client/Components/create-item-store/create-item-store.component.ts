@@ -7,20 +7,20 @@ import {
   Validators,
 } from '@angular/forms';
 import { IMG_DEFAULT } from '@constants/index';
-import { ImageMimeType, NewImageRequest, NewItemStoreRequest } from '@interfaces/index';
+import { NewItemStoreRequest } from '@interfaces/index';
 import { Base64 } from '@interfaces/models';
 import {
   HttpService,
   ItemStoreService,
   ToastrAlertService,
 } from '@services/index';
-import { logDev } from '@utils/console';
 import { Subscription } from 'rxjs';
 
 type TypeForm = {
   name: FormControl<string | null>;
   description: FormControl<string | null>;
   imagen: FormControl<string | null>;
+  value: FormControl<string | null>;
   tags: FormArray;
 };
 
@@ -62,6 +62,7 @@ export class CreateItemStoreComponent implements OnInit, OnDestroy {
       name: ['', [Validators.required, Validators.minLength(3)]],
       description: ['', [Validators.required, Validators.minLength(3)]],
       imagen: ['', [Validators.required, Validators.minLength(3)]],
+      value: [''],
       tags: this.fb.array(this.checkboxes.map((x) => x.value)),
     });
   }

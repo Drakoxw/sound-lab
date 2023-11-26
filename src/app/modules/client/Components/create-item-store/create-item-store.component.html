@@ -74,6 +74,15 @@
       </div>
     </fieldset>
 
+    <form-input
+      placeholder="Precio al cliente"
+      formControlName="value"
+      [showErrorMessage]="false"
+      label="Valor"
+      type="number"
+      [error]="description.validateError"
+    ></form-input>
+
     <div class="flex gap-2 w-full mt-4 justify-between items-end">
       <form-input-file
         class="w-full"
